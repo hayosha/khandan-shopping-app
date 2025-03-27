@@ -60,7 +60,7 @@ const ProductCarousel = () => {
             slideShadows: false,
           }}
           onSlideChange={(swiper: any) => setActiveIndex(swiper.realIndex)}
-          //   autoplay={{ delay: 3000, disableOnInteraction: false }}
+          //  autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop
           slidesPerView="auto"
           centeredSlides={true}
