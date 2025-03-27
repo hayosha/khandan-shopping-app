@@ -18,7 +18,7 @@ import { Box } from "@mui/material";
 const products = [
   {
     id: 1,
-    image: "/images/product1.jpg",
+    image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
@@ -26,7 +26,7 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/product1.jpg",
+    image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: 3,
-    image: "/images/product1.jpg",
+    image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
