@@ -19,7 +19,18 @@ const Navbar: React.FC = () => {
   return (
     <StyledAppBar position="static">
       <StyledToolbar>
-        <LogoText variant="h6">Khandan Enterprise</LogoText>
+        {/* NOTE: Commenting out the LogoText for reference 
+        <LogoText variant="h6">Khandan Enterprise</LogoText> */}
+
+        <img
+          src={`${process.env.PUBLIC_URL}/images/logo.png`}
+          alt="Khandan Enterprise Logo"
+          style={{
+            height: "115px",
+            maxWidth: "115px",
+            objectFit: "contain",
+          }}
+        />
 
         {/* Desktop nav */}
         <NavLinks>

@@ -22,23 +22,63 @@ const products = [
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
-    price: "$35.00",
+    price: "₹500.00",
   },
   {
     id: 2,
-    image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
+    image: `${process.env.PUBLIC_URL}/images/product2.jpg`,
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
-    price: "$35.00",
+    price: "₹500.00",
   },
   {
     id: 3,
-    image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
+    image: `${process.env.PUBLIC_URL}/images/product3.jpg`,
     title: "Aurora",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
-    price: "$35.00",
+    price: "₹500.00",
+  },
+  {
+    id: 4,
+    image: `${process.env.PUBLIC_URL}/images/product4.jpg`,
+    title: "Aurora",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
+  {
+    id: 5,
+    image: `${process.env.PUBLIC_URL}/images/product5.jpg`,
+    title: "Aurora",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
+  {
+    id: 6,
+    image: `${process.env.PUBLIC_URL}/images/product6.jpg`,
+    title: "Aurora",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
+  {
+    id: 7,
+    image: `${process.env.PUBLIC_URL}/images/product7.jpg`,
+    title: "Aurora",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
+  {
+    id: 8,
+    image: `${process.env.PUBLIC_URL}/images/product8.jpg`,
+    title: "Aurora",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
   },
 ];
 
