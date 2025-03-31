@@ -19,7 +19,7 @@ const products = [
   {
     id: 1,
     image: `${process.env.PUBLIC_URL}/images/product1.jpg`,
-    title: "Aurora",
+    title: "Floor Cleaner",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -27,7 +27,7 @@ const products = [
   {
     id: 2,
     image: `${process.env.PUBLIC_URL}/images/product2.jpg`,
-    title: "Aurora",
+    title: "Floor Cleaner",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -35,7 +35,7 @@ const products = [
   {
     id: 3,
     image: `${process.env.PUBLIC_URL}/images/product3.jpg`,
-    title: "Aurora",
+    title: "Liquid Handwash",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -43,7 +43,7 @@ const products = [
   {
     id: 4,
     image: `${process.env.PUBLIC_URL}/images/product4.jpg`,
-    title: "Aurora",
+    title: "Liquid Handwash",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -51,7 +51,7 @@ const products = [
   {
     id: 5,
     image: `${process.env.PUBLIC_URL}/images/product5.jpg`,
-    title: "Aurora",
+    title: "Toilet Cleaner",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -59,7 +59,7 @@ const products = [
   {
     id: 6,
     image: `${process.env.PUBLIC_URL}/images/product6.jpg`,
-    title: "Aurora",
+    title: "Toilet Cleaner",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -67,7 +67,7 @@ const products = [
   {
     id: 7,
     image: `${process.env.PUBLIC_URL}/images/product7.jpg`,
-    title: "Aurora",
+    title: "Liquid Handwash",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -75,7 +75,7 @@ const products = [
   {
     id: 8,
     image: `${process.env.PUBLIC_URL}/images/product8.jpg`,
-    title: "Aurora",
+    title: "Liquid Handwash",
     description:
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
@@ -107,7 +107,7 @@ const ProductCarousel = () => {
           speed={1200} // INFO: Smoother effect
           onBeforeInit={(swiper: any) => (swiperRef.current = swiper)}
           breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 10, centeredSlides: true }, // INFO: Sets product center
+            320: { slidesPerView: 2, spaceBetween: 10, centeredSlides: true }, // INFO: Aligns product center
             768: { slidesPerView: 3, spaceBetween: 15 },
             1024: {
               slidesPerView: 2.5,

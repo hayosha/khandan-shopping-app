@@ -34,7 +34,12 @@ const Navbar: React.FC = () => {
 
         {/* Desktop nav */}
         <NavLinks>
-          {["Bottles", "Travelers", "Tumblers", "Sets"].map((item) => (
+          {[
+            "Toilet Cleaner",
+            "Floor Cleaner",
+            "Liquid Handwash",
+            "Dish Washer Liquid",
+          ].map((item) => (
             <NavLink key={item} variant="body1">
               {item}
             </NavLink>

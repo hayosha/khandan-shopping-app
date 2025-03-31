@@ -9,11 +9,13 @@ export const MainWrapper = styled(Box)({
 });
 
 export const ContentBox = styled(Box)({
-  width: "50%",
   textAlign: "left",
   "@media (max-width: 768px)": {
     width: "100%",
     textAlign: "center",
+  },
+  "@media (min-width: 768px) and (max-width: 1024px)": {
+    width: "90%",
   },
 });
 
@@ -93,4 +95,11 @@ export const Image = styled("img")({
   objectFit: "cover",
   borderRadius: "8px",
   transition: "transform 0.6s ease-in-out",
+});
+
+export const PriceContainer = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  marginTop: "10px",
 });
