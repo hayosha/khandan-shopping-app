@@ -104,12 +104,22 @@ const ProductCarousel = () => {
           loop
           slidesPerView="auto"
           centeredSlides={true}
-          spaceBetween={30}
           speed={1200} // INFO: Smoother effect
           onBeforeInit={(swiper: any) => (swiperRef.current = swiper)}
+          breakpoints={{
+            320: { slidesPerView: 2, spaceBetween: 10, centeredSlides: true }, // INFO: Sets product center
+            768: { slidesPerView: 3, spaceBetween: 15 },
+            1024: {
+              slidesPerView: 2.5,
+              spaceBetween: 30,
+            },
+          }}
         >
           {products.map((product, index) => (
-            <SwiperSlide key={index} style={{ width: "80%" }}>
+            <SwiperSlide
+              key={index}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
               <ProductSlide product={product} />
             </SwiperSlide>
           ))}

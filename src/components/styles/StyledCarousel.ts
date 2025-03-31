@@ -8,30 +8,6 @@ export const MainWrapper = styled(Box)({
   justifyContent: "center",
 });
 
-export const CarouselItem = styled(Card)({
-  display: "flex",
-  alignItems: "center",
-  cursor: "pointer",
-  justifyContent: "space-between",
-  boxSizing: "border-box",
-  gap: "15px",
-  transition: "transform 0.6s ease-in-out, opacity 0.6s ease-in-out",
-  "@media (max-width: 768px)": {
-    flexDirection: "column",
-    textAlign: "center",
-  },
-});
-
-export const Image = styled("img")({
-  width: "50%",
-  maxHeight: "350px",
-  objectFit: "cover",
-  transition: "transform 0.6s ease-in-out",
-  "@media (max-width: 768px)": {
-    width: "100%",
-  },
-});
-
 export const ContentBox = styled(Box)({
   width: "50%",
   textAlign: "left",
@@ -87,4 +63,34 @@ export const StyledIconButton = styled(IconButton)({
     boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
     background: "white",
   },
+});
+
+export const CarouselItem = styled(Card)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  cursor: "pointer",
+  padding: "16px",
+  width: "100%",
+  maxWidth: "400px", // INFO: Set a reasonable max width
+  boxSizing: "border-box",
+  transition: "transform 0.6s ease-in-out, opacity 0.6s ease-in-out",
+
+  "@media (max-width: 767px)": {
+    width: "65%",
+  },
+
+  "@media (min-width: 768px) and (max-width: 1024px)": {
+    width: "90%",
+  },
+});
+
+export const Image = styled("img")({
+  width: "100%",
+  height: "auto",
+  maxHeight: "300px", // INFO: Ensures consistent height
+  objectFit: "cover",
+  borderRadius: "8px",
+  transition: "transform 0.6s ease-in-out",
 });
