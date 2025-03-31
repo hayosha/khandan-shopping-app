@@ -6,7 +6,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WhatsAppButton from "./WhatsAppButton";
 import {
   IconContainer,
-  LogoText,
   MobileMenuIcon,
   NavLink,
   NavLinks,
