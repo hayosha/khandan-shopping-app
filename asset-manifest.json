@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/khandan-shopping-app/static/css/main.2714e9e2.css",
-    "main.js": "/khandan-shopping-app/static/js/main.f1f4fdc2.js",
+    "main.js": "/khandan-shopping-app/static/js/main.c283e53e.js",
     "static/js/453.0114ee75.chunk.js": "/khandan-shopping-app/static/js/453.0114ee75.chunk.js",
     "static/media/inter-latin-ext-400-normal.woff": "/khandan-shopping-app/static/media/inter-latin-ext-400-normal.1c20f7dc20d731a18fcd.woff",
     "static/media/inter-latin-400-normal.woff": "/khandan-shopping-app/static/media/inter-latin-400-normal.b0c8fe9db56dd415a25a.woff",
@@ -19,11 +19,11 @@
     "static/media/inter-vietnamese-400-normal.woff2": "/khandan-shopping-app/static/media/inter-vietnamese-400-normal.44c9df135eec470b0ab6.woff2",
     "index.html": "/khandan-shopping-app/index.html",
     "main.2714e9e2.css.map": "/khandan-shopping-app/static/css/main.2714e9e2.css.map",
-    "main.f1f4fdc2.js.map": "/khandan-shopping-app/static/js/main.f1f4fdc2.js.map",
+    "main.c283e53e.js.map": "/khandan-shopping-app/static/js/main.c283e53e.js.map",
     "453.0114ee75.chunk.js.map": "/khandan-shopping-app/static/js/453.0114ee75.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2714e9e2.css",
-    "static/js/main.f1f4fdc2.js"
+    "static/js/main.c283e53e.js"
   ]
 }
