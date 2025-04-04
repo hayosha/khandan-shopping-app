@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       startIcon={<WhatsAppIcon />}
       onClick={handleClick}
     >
-      Contact us on WhatsApp
+      With Us
     </WhatsAppStyledButton>
   );
 };
