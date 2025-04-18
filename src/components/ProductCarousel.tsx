@@ -1,19 +1,13 @@
-import { useRef, useState } from "react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
-import { MainWrapper } from "./styles/StyledCarousel";
+  SwiperContainer,
+  StyledSwiper,
+  NavButton,
+} from "./styles/StyledCarousel";
+import { Navigation, Mousewheel } from "swiper/modules";
 import ProductSlide from "./ProductSlide";
-import CarouselControls from "./CarouselControls";
-import { Box } from "@mui/material";
 
 const products = [
   {
@@ -80,58 +74,54 @@ const products = [
       "Bright sunset hues take center stage in this eye-catching design.",
     price: "₹500.00",
   },
+  {
+    id: 9,
+    image: `${process.env.PUBLIC_URL}/images/product9.jpg`,
+    title: "Matic Liquid Detergent",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
+  {
+    id: 10,
+    image: `${process.env.PUBLIC_URL}/images/product10.jpg`,
+    title: "Matic Liquid Detergent",
+    description:
+      "Bright sunset hues take center stage in this eye-catching design.",
+    price: "₹500.00",
+  },
 ];
 
 const ProductCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef<any>(null);
-
   return (
-    <MainWrapper>
-      <Box sx={{ maxWidth: "900px" }}>
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-          effect="coverflow" // INFO: Enables coverflow effect
-          coverflowEffect={{
-            rotate: 20,
-            stretch: 0,
-            depth: 150,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          onSlideChange={(swiper: any) => setActiveIndex(swiper.realIndex)}
-          //  autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop
-          slidesPerView="auto"
-          centeredSlides={true}
-          speed={1200} // INFO: Smoother effect
-          onBeforeInit={(swiper: any) => (swiperRef.current = swiper)}
-          breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 10, centeredSlides: true }, // INFO: Aligns product center
-            768: { slidesPerView: 3, spaceBetween: 15 },
-            1024: {
-              slidesPerView: 2.5,
-              spaceBetween: 30,
-            },
-          }}
-        >
-          {products.map((product, index) => (
-            <SwiperSlide
-              key={index}
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <ProductSlide product={product} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <SwiperContainer>
+      <StyledSwiper
+        direction="vertical"
+        slidesPerView={1}
+        spaceBetween={30}
+        mousewheel={{
+          forceToAxis: true,
+          sensitivity: 0.5, // Slower scroll/swipe for smoother UX
+        }}
+        speed={800} // Smooth transition speed
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        modules={[Navigation, Mousewheel]}
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id}>
+            <ProductSlide product={product} />
+          </SwiperSlide>
+        ))}
+      </StyledSwiper>
 
-        <CarouselControls
-          swiperRef={swiperRef}
-          total={products.length}
-          activeIndex={activeIndex}
-        />
-      </Box>
-    </MainWrapper>
+      <NavButton className="swiper-button-prev" isTop sx={{ left: "auto" }}>
+        ↑
+      </NavButton>
+      <NavButton className="swiper-button-next">↓</NavButton>
+    </SwiperContainer>
   );
 };
 

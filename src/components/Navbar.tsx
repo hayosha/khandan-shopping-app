@@ -38,6 +38,7 @@ const Navbar: React.FC = () => {
             "Floor Cleaner",
             "Liquid Handwash",
             "Dish Washer Liquid",
+            "Matic Liquid Detergent",
           ].map((item) => (
             <NavLink key={item} variant="body1">
               {item}

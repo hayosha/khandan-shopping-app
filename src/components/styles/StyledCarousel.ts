@@ -1,105 +1,110 @@
 import styled from "@emotion/styled";
-import { Box, Card, IconButton } from "@mui/material";
+import { Box, Card } from "@mui/material";
+import { Swiper } from "swiper/react";
+import { css } from "@emotion/react";
 
-export const MainWrapper = styled(Box)({
-  height: "100vh",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-});
+interface NavButtonProps {
+  isTop?: boolean;
+}
 
-export const ContentBox = styled(Box)({
-  textAlign: "left",
-  "@media (max-width: 768px)": {
-    width: "100%",
-    textAlign: "center",
-  },
-  "@media (min-width: 768px) and (max-width: 1024px)": {
-    width: "90%",
-  },
-});
+export const SwiperContainer = styled(Box)`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
 
-export const ControlsContainer = styled(Box)({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  gap: "15px",
-  marginTop: "30px",
-});
+export const StyledSwiper = styled(Swiper)`
+  width: 90%;
+  max-width: 700px;
+  height: 80%;
 
-export const DotsContainer = styled(Card)({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "8px 22px",
-  borderRadius: "30px",
-  background: "white",
-  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-  transition: "box-shadow 0.3s ease",
-  "&:hover": {
-    boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
-  },
-});
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+`;
 
-export const Dot = styled("span")(({ active }: { active: boolean }) => ({
-  width: active ? "6px" : "5px",
-  height: active ? "6px" : "5px",
-  borderRadius: "50%",
-  background: active ? "#333" : "#ccc",
-  margin: "0 5px",
-  transition: "all 0.3s ease",
-}));
+export const CarouselItem = styled(Card)`
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background: white;
+  transition: transform 0.4s ease-in-out;
+  cursor: grab;
+  "&:active": {
+    cursor: "grabbing";
+  }
 
-export const StyledIconButton = styled(IconButton)({
-  background: "white",
-  color: "black",
-  width: "22px",
-  height: "22px",
-  borderRadius: "50%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  transition: "background 0.3s ease, box-shadow 0.3s ease",
-  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-  "&:hover": {
-    boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
-    background: "white",
-  },
-});
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+`;
 
-export const CarouselItem = styled(Card)({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  cursor: "pointer",
-  padding: "16px",
-  width: "100%",
-  maxWidth: "400px", // INFO: Set a reasonable max width
-  boxSizing: "border-box",
-  transition: "transform 0.6s ease-in-out, opacity 0.6s ease-in-out",
+export const Image = styled("img")`
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+`;
 
-  "@media (max-width: 767px)": {
-    width: "65%",
-  },
+export const ContentBox = styled(Box)`
+  margin-top: 16px;
+  text-align: left;
 
-  "@media (min-width: 768px) and (max-width: 1024px)": {
-    width: "90%",
-  },
-});
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
 
-export const Image = styled("img")({
-  width: "100%",
-  height: "auto",
-  maxHeight: "300px", // INFO: Ensures consistent height
-  objectFit: "cover",
-  borderRadius: "8px",
-  transition: "transform 0.6s ease-in-out",
-});
+export const PriceContainer = styled(Box)`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
 
-export const PriceContainer = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  marginTop: "10px",
-});
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+`;
+
+export const NavButton = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isTop",
+})<NavButtonProps>`
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+
+  ${(props) =>
+    props.isTop
+      ? css`
+          top: 20px;
+        `
+      : css`
+          bottom: 20px;
+        `}
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &::after {
+    display: none; // hide default Swiper arrow
+  }
+`;
